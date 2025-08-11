@@ -17,3 +17,4 @@ function b() {
  //beacuse of function scope in JavaScript and execution context are imdependent of each other
 // the global variable x remains unchanged and retains its value of 1
 // 
+
