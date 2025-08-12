@@ -61,3 +61,35 @@
 // primitives -> aisi sari values jinko copy karne par tumhe eak real value mil jaye
 // reference or non-primitives -> aisi values jinko copy karne par tumhe eak reference milta hai, wo value nahi milti
 
+let a = [1 ,2 ,3];
+a.pop();
+let b = a;
+
+
+//string , number ,boolean , null ,undefined, symbol, bigint
+//arrays ,objects, functions
+
+//reference data types mei agar tum kisi aur variable mei dusre variable ki values di hai tohagar tum eak 
+// variable mei chnge kroge toh dusra bhi change hoga 
+
+
+//dynamic typing --> aap data ko chnage kr skte ho
+
+// quirks--->NaN +NaN gives false , 
+//           .1 +.2 gives .300000000000004
+//           [] + [] gives ''
+//           1 +'1' gives 11
+
+//type coercion-------->1 type automaticallly conbverted to another
+
+// "5" + 1 // "51" → number converted to string
+// "5" - 1 // 4 → string converted to number
+// true + 1 // 2
+// null + 1 // 1
+// undefined + 1 // NaN
+
+//truthy vs falsy values
+// to check ---> !!
+
+//typeof NaN === 'number'  gives true
+//its because NaN failed number numerical operation....eg 2* 'harsh' gives NaN
