@@ -23,8 +23,6 @@ var getname2 = function () {
 }
 console.log(getname2()); // this will work because function expression is hoisted
 
-
-
 console.log(getName3()); //TypeError: getName3 is not a function
 
 var getName3 = () => {
