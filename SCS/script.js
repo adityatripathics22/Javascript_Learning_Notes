@@ -93,3 +93,29 @@ let b = a;
 
 //typeof NaN === 'number'  gives true
 //its because NaN failed number numerical operation....eg 2* 'harsh' gives NaN
+
+//operators------------------->phase 3
+
+// arithmetic 
+// + - / * % **
+
+// comparison
+// == === != !== >= <= > <
+
+// logical
+// && || !
+
+// assignment
+// = += -= *= %= /=
+
+// unary 
+// ++ --  + - typeof !
+// \
+// ternary
+// ? : 
+
+// quirks ---> typeof null gives object but its null
+//             typeof [] gives object but its Array
+//             typeof NaN GIVES Number
+
+// instanceof works only with reference valus like [] {} ()
