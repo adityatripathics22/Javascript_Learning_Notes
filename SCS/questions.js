@@ -47,3 +47,8 @@
 // }
 // while(12>13)
 
+function double(val){
+    return val *2;
+
+}
+console.log(double(5)); // should return 10
