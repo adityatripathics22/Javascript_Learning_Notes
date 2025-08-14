@@ -119,3 +119,93 @@ let b = a;
 //             typeof NaN GIVES Number
 
 // instanceof works only with reference valus like [] {} ()
+
+
+// function print(x){
+//     console.log(x + " nach rha hai");
+// }
+
+// function print2(x){
+//     console.log(`$ {x} nach rha hai `);
+// }
+// //by using backtick we can use dynamic values in strings
+// print("gadha");
+// print2("ghoda");
+
+//parameters vs arguments
+// parameters are the variables that are used in the function definition
+// arguments are the values that are passed to the function when it is called
+
+//rest/spread --> ...
+//they make a array of values
+//rest is used in function definition to accept multiple arguments as an array
+
+///jab arguments kai sare ho to humein utne hi parameter banane padenge , issey bachne ke liye hum rest ka use krte hai...
+//rest ka use function definition mei hota hai
+//spread ka use function call mei hota hai
+
+// function add(...args) 
+
+//return ka mtlb jaha se aaye ho wahi daal denge
+
+
+//first class functions
+// function abcd(val){
+    
+//     console.log("aditys");
+//     val();
+
+// }
+// abcd(function(){
+//     console.log("hello");
+// });
+
+// 159 -> 153 -> 155 -> 156 -> 160
+
+//higher order functions
+
+// functions that take other functions as arguments or return functions as values
+// function abcd(val){
+//     console.log(val)
+//     return function(value){
+//         console.log("aditya");
+//         console.log(value)
+//     }
+
+// }
+// abcd(2)(3);
+
+//pure vs impure functions
+// aese functions jo kisi bhi external state ko change nahi karte unhe pure functions kehte hai
+// aese functions jo kisi bhi external state ko change karte hai unhe impure functions kehte hai
+
+// let a =12;
+
+// function abcd() {
+//     console.log("aditya"); //not changing external state
+//     a = 13; // changing external state
+// }
+
+
+// closures--->
+
+// eak function jo return kare eak aur function aur return hone function use krega 
+// parent function ka koi variable ya state
+
+// function outer() {
+//     let a = 10;
+//     return function inner() {
+//         console.log(a);
+//     }
+// }
+
+// outer()(); // 10
+
+// lexical scope
+// eak function ke andar jo bhi variable define hote hai wo us function ke andar hi accessible hote hai
+// ya keh skte hai ki wo area jaha tha wo cheez accessiblle ho skti hai
+
+// lexical scope is the scope that is defined by the location of the function in the source code
+
+
+
