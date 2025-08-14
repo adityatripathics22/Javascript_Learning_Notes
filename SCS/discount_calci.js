@@ -8,6 +8,7 @@ function discountCalculator(discount){
 let ten = discountCalculator(10);
 let twenty = discountCalculator(20);
 // console.log(ten(100)); // should return 90
+let discounter = discountCalculator(50);
 
 console.log(discounter(100)); // should return 90
 
