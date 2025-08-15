@@ -186,8 +186,7 @@ let b = a;
 //     a = 13; // changing external state
 // }
 
-
-// closures--->
+// closures--------------->
 
 // eak function jo return kare eak aur function aur return hone function use krega 
 // parent function ka koi variable ya state
@@ -208,4 +207,36 @@ let b = a;
 // lexical scope is the scope that is defined by the location of the function in the source code
 
 
+//ARRAYS---------------------->
+
+// in js arrays can hold any type of data
+// in js if you access an index that is not defined, it will return undefined
+// in js arrays are zero indexed
+// in js arrays are mutable, you can change the values of the array
+
+let arr = [23 , 12, 34, 56, 78, 90];
+let arrr = arr.sort(function(a,b){
+    return a-b;
+})
+//let arrr =arr.sort((a, b) => a - b); // sort the array in ascending order
+console.log(arrr); // [12, 23, 34, 56, 78
+
+let rev =arrr.reverse();
+console.log(rev); // [90, 78, 56, 34, 23, 12]
+
+let arr2 = [1, 2, 3, 4, 5];
+let arr3 = arr2.map(function(value) {
+    return value * 2; // multiply each element by 2
+});
+console.log(arr3); // [2, 4, 6, 8, 10]
+
+let arr4 = arr2.filter(function(value) {
+    return value % 2 === 0; // filter even numbers on true and false condition
+});
+console.log(arr4); // [2, 4]
+
+let arr5 = arr2.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue; // sum of all elements
+}, 0); // initial value is 0
+console.log(arr5); // 15
 
