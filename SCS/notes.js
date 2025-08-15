@@ -240,3 +240,45 @@ let arr5 = arr2.reduce(function(accumulator, currentValue) {
 }, 0); // initial value is 0
 console.log(arr5); // 15
 
+let arr6 = arr2.find(function(value) {
+    return value > 3; // find the first element greater than 3
+});
+console.log(arr6); // 4
+
+let arr7 = arr2.findIndex(function(value) {
+    return value > 3; // find the index of the first element greater than 3
+}   );
+console.log(arr7); // 3
+
+let arr8 = arr2.includes(3); // check if the array includes the value 3
+console.log(arr8); // true  
+
+let arr9 = arr2.indexOf(3); // find the index of the value 3
+console.log(arr9); // 2 
+
+let arr10 = arr2.lastIndexOf(3); // find the last index of the value 3
+console.log(arr10); // 2    
+
+let arr11 = arr2.join(", "); // join the array elements into a string
+console.log(arr11); // "1, 2, 3, 4, 5"
+
+let arr12 = arr2.slice(1, 4); // slice the array from index 1 to 4 (not inclusive)
+console.log(arr12); // [2, 3, 4]
+
+let arr13 = arr2.splice(1, 2, 6, 7); // remove 2 elements from index 1 and add 6 and 7
+console.log(arr2); // [1, 6, 7, 4, 5]
+console.log(arr13); // [2, 3]
+
+let arr14 = arr2.concat([8, 9]); // concatenate two arrays
+console.log(arr14); // [1, 6, 7, 4, 5, 8, 9]    
+
+let arr15 = arr2.sort(); // sort the array in ascending order
+console.log(arr15); // [1, 4, 5, 6, 7]
+
+let arr16 = arr2.reverse(); // reverse the array
+console.log(arr16); // [7, 6, 5, 4, 1]
+
+
+
+
+
