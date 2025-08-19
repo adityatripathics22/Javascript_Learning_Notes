@@ -28,7 +28,7 @@
 // var is hoisted, let and const are not hoisted
 
 //temporal dead zone
-//let and const are not hoisted, they are in temporal dead zone
+//const is not hoisted, they are in temporal dead zone
 //if we try to access them before they are declared, we will get a reference error
 // var is hoisted, but it is initialized with undefined
 // so if we try to access it before it is declared, we will get undefined
@@ -51,7 +51,7 @@
 // }
 // console.log("outside" , a); // 10
 
-//-----------> data types
+//-----------------------------> data types
 
 // let a = 12;
 
@@ -140,7 +140,7 @@ let b = a;
 //they make a array of values
 //rest is used in function definition to accept multiple arguments as an array
 
-///jab arguments kai sare ho to humein utne hi parameter banane padenge , issey bachne ke liye hum rest ka use krte hai...
+//jab arguments kai sare ho to humein utne hi parameter banane padenge , issey bachne ke liye hum rest ka use krte hai...
 //rest ka use function definition mei hota hai
 //spread ka use function call mei hota hai
 
