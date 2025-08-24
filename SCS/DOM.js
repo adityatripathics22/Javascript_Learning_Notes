@@ -23,3 +23,10 @@
 //let element = document.querySelector(".myClass"); // selects the first element with class "myClass"
 // let element = document.querySelector("#myId"); // selects the element with id "myId"
 // let elements = document.querySelectorAll(".myClass"); // selects all elements with class "myClass"
+
+ let h1 = document.querySelector("h1");
+ console.dir(h1);
+ h1.innerText = "harsh hu mai"; // changes the inner HTML of the h1 element
+ h1.style.color = "red"; // changes the text color to red
+ h1.innerHTML = "<i>harsh hu mai</i>"; // changes the inner HTML to italicized text
+ 
