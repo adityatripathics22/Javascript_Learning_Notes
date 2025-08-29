@@ -24,9 +24,40 @@
 // let element = document.querySelector("#myId"); // selects the element with id "myId"
 // let elements = document.querySelectorAll(".myClass"); // selects all elements with class "myClass"
 
- let h1 = document.querySelector("h1");
- console.dir(h1);
- h1.innerText = "harsh hu mai"; // changes the inner HTML of the h1 element
- h1.style.color = "red"; // changes the text color to red
- h1.innerHTML = "<i>harsh hu mai</i>"; // changes the inner HTML to italicized text
+/*
+let h1 = document.querySelector("h1");
+console.dir(h1);
+h1.innerText = "harsh hu mai"; // changes the inner HTML of the h1 element
+// h1.style.color = "red"; // changes the text color to red
+h1.innerHTML = "<i>harsh hu mai</i>"; // changes the inner HTML to italicized text
+
+let img = document.querySelector("img" );
+//img.setAttribute("what to change" , "change to what" );
+img.setAttribute(
+    "src" ,
+    "https://images.unsplash.com/photo-1756151224665-eba765e8c3b5?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+);
+
+console.log(img.getAttribute("src"));
+
+// let h2 = document.querySelector("h1");
+// console.log(h2);
+
+
+//create element
+let newh1 = document.createElement("h1");
+newh1.innerText = "yeh naya h1 hai";
+newh1.style.color = "blue";
+//document.body.prepend(newh1);//to attach the element to the body at the start
+// document.body.append(newh1);//to attach the element to the body at the end
  
+
+document.querySelector("div").append(newh1);//to attach the element to a specific div at the end
+
+
+let div =document.querySelector("div");
+console.dir(div);
+div.textContent = "yeh text content hai "; // ye puri div ke andar ka text content hata dega aur isse replace kar dega
+*/
+let h1s = document.querySelector("css");
+console.log(h1s);
