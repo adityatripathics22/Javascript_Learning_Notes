@@ -1,1 +1,137 @@
-what is dom?how does it represent the html structutre
+what is dom? how does it represent the html structutre?
+
+// DOM is document object model
+// tree structure of html page
+// it represents the html structure in form of nodes
+// each html tag is represented by a node
+// there are different types of nodes
+// element nodes
+// text nodes
+// attribute nodes
+// comment nodes
+// document nodes
+
+------------------------------------------------------
+how to access the dom using javascript?
+
+// we can access the dom using the document object
+// document object is the root of the dom tree
+// we can access the elements of the dom tree using various methods of the document object
+// getElementById()
+// getElementsByClassName()
+// getElementsByTagName()
+// querySelector()
+// querySelectorAll()
+------------------------------------------------------
+element nodes vs text nodes
+
+// element nodes are the html tags
+// text nodes are the text inside the html tags
+// we can access the text nodes using the childNodes property of the element node
+//eg let div = document.querySelector("div");
+// console.log(div.childNodes);
+// it will give us a nodelist of all the child nodes of the div element
+// we can access the element nodes using the children property of the element node
+// eg console.log(div.children);
+// it will give us a html collection of all the child element nodes of the div element
+------------------------------------------------------
+
+how to manipulate the dom using javascript?
+
+// we can manipulate the dom using various methods of the element nodes
+// innerHTML
+// innerText
+// style
+// classList
+// setAttribute()
+// getAttribute()
+// removeAttribute()
+// createElement()
+// appendChild()
+// removeChild()
+// replaceChild()
+// cloneNode()
+// etc
+------------------------------------------------------
+how to add css using javascript?
+
+// we can add css using the style property of the element node  
+// eg let h1 = document.querySelector("h1");
+// h1.style.color = "red";
+// h1.style.backgroundColor = "yellow";
+// we can also add css using the classList property of the element node
+// eg h1.classList.add("myClass");
+// h1.classList.remove("myClass");
+// h1.classList.toggle("myClass");
+// h1.classList.contains("myClass");
+// we can also add css using the setAttribute() method of the element node
+// eg h1.setAttribute("class", "myClass");
+// h1.setAttribute("id", "myId");
+------------------------------------------------------
+
+querySelector vs querySelectorAll
+
+// querySelector() method returns the first element that matches the specified css selector
+// querySelectorAll() method returns a nodelist of all the elements that match the specified css selector
+
+------------------------------------------------------
+
+difference between html collection and nodelist
+
+// html collection is a live collection of elements
+// nodelist is a static collection of nodes
+// html collection is an array-like object
+// nodelist is a collection of nodes
+// we can access the elements of the html collection using the index
+// we can access the nodes of the nodelist using the index
+
+------------------------------------------------------
+select all <li> elements and print their text content using a loop.
+
+let liElements = document.querySelectorAll("li");
+liElements.forEach(function(li) {
+    console.log(li.textContent);
+});
+or
+for (let i = 0; i < liElements.length; i++) {
+    console.log(liElements[i].textContent);
+}
+
+------------------------------------------------------
+select the element with id "main" and change its background color to blue.
+
+let mainElement = document.getElementById("main");
+mainElement.style.backgroundColor = "blue";
+------------------------------------------------------
+select all elements with class "item" and add a new class "highlight" to each of them.
+
+let itemElements = document.getElementsByClassName("item");
+for (let i = 0; i < itemElements.length; i++) {
+    itemElements[i].classList.add("highlight");
+}
+------------------------------------------------------
+
+how do you get the src of an image using javascript?
+let imgElement = document.querySelector("img");
+let imgSrc = imgElement.getAttribute("src");
+console.log(imgSrc);
+or 
+console.log(imgElement.src);
+------------------------------------------------------
+how do you change the text of a paragraph using javascript?
+let pElement = document.querySelector("p");
+pElement.innerText = "New text";
+or
+pElement.textContent = "New text";
+------------------------------------------------------
+how do you create a new div element and append it to the body using javascript?
+let newDiv = document.createElement("div");
+newDiv.innerText = "This is a new div";
+document.body.appendChild(newDiv);
+------------------------------------------------------  
+how do you remove an element from the dom using javascript?
+let elementToRemove = document.querySelector(".to-remove");
+elementToRemove.parentNode.removeChild(elementToRemove);
+ 
+
+
