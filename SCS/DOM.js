@@ -59,5 +59,13 @@ let div =document.querySelector("div");
 console.dir(div);
 div.textContent = "yeh text content hai "; // ye puri div ke andar ka text content hata dega aur isse replace kar dega
 */
-let h1s = document.querySelector("css");
-console.log(h1s);
+let h1s = document.querySelector("h1");
+//console.dir(h1s);
+h1s.classList.add("hulu");
+h1s.classList.remove("hulu");
+h1s.classList.toggle("hulu");
+
+
+let h2s = document.querySelector(".abcd");
+console.dir(h2s);
+h2s.classList.add("hulu");
