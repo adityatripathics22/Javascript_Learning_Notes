@@ -76,3 +76,11 @@ console.dir(div.childNodes);
 
 let div2 = document.querySelector("div");
 div2.title = "yeh mera title hai"; // ye title attribute add kar dega
+
+
+
+// # → selects by id
+
+// . → selects by class
+
+// tag name (like select, p, div) → selects by element type

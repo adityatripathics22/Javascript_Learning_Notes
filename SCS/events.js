@@ -20,3 +20,24 @@ function doubleClick(){
     p.style.color = "red";
 }
 p.addEventListener("dblclick" ,doubleClick );
+
+
+const text = document.getElementById("text");
+
+text.addEventListener("mouseover", () => {
+console.log("Mouse entered (mouseover)");
+});
+
+text.addEventListener("mouseout", () => {
+console.log("Mouse left (mouseout)");
+});
+
+
+let sel = document.querySelector("select");
+let device = document.querySelector("#device");
+
+sel.addEventListener("change" , function(deta){
+    console.log(deta);
+    console.log(deta.target.value);
+    device.textContent = "Device Selected";
+});
