@@ -16,28 +16,49 @@ let p = document.querySelector("p");
 
 //but when we remove we have to pass the same function in the removeEventListner
 
-function doubleClick(){
-    p.style.color = "red";
-}
-p.addEventListener("dblclick" ,doubleClick );
+// function doubleClick(){
+//     p.style.color = "red";
+// }
+// p.addEventListener("dblclick" ,doubleClick );
 
 
-const text = document.getElementById("text");
+// const text = document.getElementById("text");
 
-text.addEventListener("mouseover", () => {
-console.log("Mouse entered (mouseover)");
-});
+// text.addEventListener("mouseover", () => {
+// });
 
-text.addEventListener("mouseout", () => {
-console.log("Mouse left (mouseout)");
-});
+// text.addEventListener("mouseout", () => {
+// console.log("Mouse left (mouseout)");
+// });
 
 
-let sel = document.querySelector("select");
-let device = document.querySelector("#device");
+//prints details of input
 
-sel.addEventListener("change" , function(deta){
-    console.log(deta);
-    console.log(deta.target.value);
-    device.textContent = "Device Selected";
-});
+let inp = document.querySelector("input"); 
+// inp.addEventListener("input" , function (data){
+//     console.log(data);
+// });
+// inp.addEventListener("input" , function (dets){
+//     if(dets.data !== null){
+//         console.log(dets.data);
+//     }
+// });
+
+// let sel = document.querySelector("select");
+// let device = document.querySelector("#device");
+
+// sel.addEventListener("change" , function(deta){
+//     console.log(deta);
+//     console.log(deta.target.value);
+//     device.textContent = `${deta.target.value} Device Selected`;
+// });
+
+let h1 = document.querySelector("h1")
+window.addEventListener("keydown" , function(dets){
+    if(dets.key === " "){
+        h1.textContent="spc";
+    }else{
+        h1.textContent=dets.key;
+    }
+})
+
