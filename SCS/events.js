@@ -5,6 +5,8 @@
 //select the para first
 let p = document.querySelector("p");
 
+//click---------------------------------------------
+
 // p.addEventListener("click" , function(){
 //     p.style.color = "green";
 // })
@@ -32,7 +34,7 @@ let p = document.querySelector("p");
 // });
 
 
-//prints details of input
+//prints details of input--------------------------------------
 
 let inp = document.querySelector("input"); 
 // inp.addEventListener("input" , function (data){
@@ -53,12 +55,26 @@ let inp = document.querySelector("input");
 //     device.textContent = `${deta.target.value} Device Selected`;
 // });
 
-let h1 = document.querySelector("h1")
-window.addEventListener("keydown" , function(dets){
-    if(dets.key === " "){
-        h1.textContent="spc";
-    }else{
-        h1.textContent=dets.key;
-    }
-})
+// let h1 = document.querySelector("h1")
+// window.addEventListener("keydown" , function(dets){
+//     if(dets.key === " "){
+//         h1.textContent="spc";
+//     }else{
+//         h1.textContent=dets.key;
+//     }
+// })
 
+//change---------------------------------------------
+
+// let btn = document.querySelector("#btn");
+// let fileInput = document.querySelector("#fileInput");
+
+// btn.addEventListener("click" , function(){
+//     fileInput.click();
+// })
+
+// fileInput.addEventListener("change" , function(dets){
+//     btn.textContent = dets.target?.files[0].name;
+// })
+
+ 

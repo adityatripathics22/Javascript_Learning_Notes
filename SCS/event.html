@@ -24,7 +24,7 @@
             height: 100%;
             background-color: #222;
         }
-        h1{
+        /* h1{
             color: #555;
             font-size: 10rem;
             font-weight: 600;
@@ -33,13 +33,24 @@
 
 
 
+        } */
+         input{
+            /* display: none; */
+            display: block;
+         }
+         #btn{
+            padding: 12px 22px;
+            background-color: red;
+            color: white;
+            border-radius: 30px;
+         }
+        #btn:hover{
+            background-color: aqua;
         }
     </style>
 </head>
 <body>
-    <div id="main">
-        <h1>a</h1>
-    </div>
+    
 
     <!-- <input type="text" placeholder="name" >
     <h1 >apple</h1>
@@ -53,6 +64,22 @@
         <option value = "apple">Apple</option>
         <option value = "boat">Boat</option>
     </select> -->
+
+    <!-- <div id="main">
+         <h1>a</h1> 
+         <input id = "fileInput" type="file">
+         <div id="btn" > upload file</div>
+    </div> -->
+
+    <div id="main">
+        <form action="">
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="age">
+            <input type="text" placeholder="email">
+            <input type="text" placeholder="profile pic">
+            <input type="submit" >
+        </form>
+    </div>
     <script src="events.js"></script>
 </body>
 </html>
