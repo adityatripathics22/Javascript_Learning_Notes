@@ -76,6 +76,8 @@ let inp = document.querySelector("input");
 // fileInput.addEventListener("change" , function(dets){
 //     btn.textContent = dets.target?.files[0].name;
 // })
+
+
 let abcd = document.querySelector("#abcd");
 window.addEventListener("mousemove",function(dets){
     abcd.style.top = -100 + dets.clientY + "px";
@@ -83,7 +85,31 @@ window.addEventListener("mousemove",function(dets){
     
 })
 
+
 document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault(); // stops the page from reloading
     alert("Form submitted! Data is still there."); 
 })
+
+//event bubbling------------
+//jispe event ayega agar uspar listner nhi hua toh humara event uske parent par listner dhudega aur aisa
+//krte krte upar ki taraf move krega
+
+document.getElementById("parent").addEventListener("click", function() {
+    alert("Parent DIV clicked!");
+});
+
+// document.getElementById("child").addEventListener("click", function() {
+//     alert("Child DIV clicked!");
+// });
+
+// document.getElementById("btn").addEventListener("click", function() {
+//     alert("Button clicked!");
+// });
+
+
+//Event Capturing (trickling): Event starts at the top (document) and goes
+// downward to the target element (parent → child → target).
+//by default its always off and only bubbling phase is active so to on this we just need to write true after the function
+
+//note ---- click hum child pr karenge to chahe child pr listner ho ya na ho parent ka listner chalega hi chalega
