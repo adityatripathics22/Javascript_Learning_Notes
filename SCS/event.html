@@ -9,6 +9,7 @@
             margin:0;
             padding: 0;
             box-sizing:border-box ;
+            font-family: "Gilroy" ;
         }
         html,
         body{
@@ -47,6 +48,19 @@
         #btn:hover{
             background-color: aqua;
         }
+
+        body{
+            overflow: hidden;
+            position: relative;  
+        }
+
+        #abcd{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
     </style>
 </head>
 <body>
@@ -71,7 +85,7 @@
          <div id="btn" > upload file</div>
     </div> -->
 
-    <div id="main">
+    <!-- <div id="main">
         <form action="">
             <input type="text" placeholder="name">
             <input type="text" placeholder="age">
@@ -79,7 +93,15 @@
             <input type="text" placeholder="profile pic">
             <input type="submit" >
         </form>
-    </div>
+    </div> -->
+
+    <!-- <div id="abcd"></div> -->
+
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Enter name">
+        <input type="email" name="email" placeholder="Enter email">
+        <button type="submit">Submit</button>
+    </form>
     <script src="events.js"></script>
 </body>
 </html>

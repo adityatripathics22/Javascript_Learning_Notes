@@ -76,5 +76,14 @@ let inp = document.querySelector("input");
 // fileInput.addEventListener("change" , function(dets){
 //     btn.textContent = dets.target?.files[0].name;
 // })
+let abcd = document.querySelector("#abcd");
+window.addEventListener("mousemove",function(dets){
+    abcd.style.top = -100 + dets.clientY + "px";
+    abcd.style.left = -100 + dets.clientX + "px";
+    
+})
 
- 
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // stops the page from reloading
+    alert("Form submitted! Data is still there."); 
+})
