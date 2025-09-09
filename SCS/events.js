@@ -121,18 +121,36 @@ let inp = document.querySelector("input");
 
 //note ---- click hum child pr karenge to chahe child pr listner ho ya na ho parent ka listner chalega hi chalega
 
-let inpu = document.querySelector("input");
-let count = document.querySelector("#count");
+// let inpu = document.querySelector("input");
+// let count = document.querySelector("#count");
 
 
-inpu.addEventListener("input" , function(){
-    let left = 20 - inpu.value.length;
+// inpu.addEventListener("input" , function(){
+//     let left = 20 - inpu.value.length;
     
-    if(left < 0){
-        count.textContent=left;
-        count.style.color ="red";
+//     if(left < 0){
+//         count.textContent=left;
+//         count.style.color ="red";
+//     }else{
+//         count.textContent=left;
+//         count.style.color="black";
+//     }
+// })
+
+
+
+let nm = document.querySelector("#name");
+let form = document.querySelector("form");
+
+form.addEventListener("submit" , function(dets){
+    dets.preventDefault();
+
+    if(nm.value.length <= 2){
+        document.querySelector("#hide").style.display = "initial";
+
     }else{
-        count.textContent=left;
-        count.style.color="black";
+        document.querySelector("#hide").style.display = "none";
+
     }
+
 })

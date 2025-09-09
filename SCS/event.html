@@ -61,6 +61,15 @@
             background-color: red;
         }
 
+        form{
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+
+        #hide{
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -111,11 +120,33 @@
     </div>
   </div> -->
 
-  <div >
+  <!-- <div >
     <input type="text" placeholder="type here">
     <h1 >Characters Left : <span id = count>12</span></h1>\
     
-  </div>
+  </div> -->
+  <form >
+    <input pattern="[a-z]{3-8}" minlength="3" maxlength="8" required type="text" placeholder="Name" id="name">
+    <div id="hide">
+        <small >Your name should be greater than 2 Characters</small>
+        <br>
+    </div>
+    <br>
+    <input type="email" placeholder="Email" >
+    <br>
+    <input type="password" placeholder="Password">
+    <br>
+    <select>
+        <option >Gender</option>
+        <option >Male</option>
+        <option >Female</option>
+
+    </select>
+    <br><br>
+    <textarea placeholder="Tell me about Yourself"></textarea>
+    <br><br>
+    <button >Submit</button>
+  </form>
     <script src="events.js"></script>
 </body>
 </html>
