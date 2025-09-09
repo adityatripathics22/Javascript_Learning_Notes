@@ -78,26 +78,26 @@ let inp = document.querySelector("input");
 // })
 
 
-let abcd = document.querySelector("#abcd");
-window.addEventListener("mousemove",function(dets){
-    abcd.style.top = -100 + dets.clientY + "px";
-    abcd.style.left = -100 + dets.clientX + "px";
+// let abcd = document.querySelector("#abcd");
+// window.addEventListener("mousemove",function(dets){
+//     abcd.style.top = -100 + dets.clientY + "px";
+//     abcd.style.left = -100 + dets.clientX + "px";
     
-})
+// })
 
 
-document.getElementById("myForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // stops the page from reloading
-    alert("Form submitted! Data is still there."); 
-})
+// document.getElementById("myForm").addEventListener("submit", function(event) {
+//     event.preventDefault(); // stops the page from reloading
+//     alert("Form submitted! Data is still there."); 
+// })
 
 //event bubbling------------
 //jispe event ayega agar uspar listner nhi hua toh humara event uske parent par listner dhudega aur aisa
 //krte krte upar ki taraf move krega
 
-document.getElementById("parent").addEventListener("click", function() {
-    alert("Parent DIV clicked!");
-});
+// document.getElementById("parent").addEventListener("click", function() {
+//     alert("Parent DIV clicked!");
+// });
 
 // document.getElementById("child").addEventListener("click", function() {
 //     alert("Child DIV clicked!");
@@ -112,4 +112,27 @@ document.getElementById("parent").addEventListener("click", function() {
 // downward to the target element (parent → child → target).
 //by default its always off and only bubbling phase is active so to on this we just need to write true after the function
 
+
+//jab bhi aap click krte ho ya koi bhi event raise krte ho toh aapka event flow do phase mei chalta hai
+//PHASE 1:-> event top level element se neeche ki taraf ayega\
+//PHASE:-> event raised element se parent ki taraf ayega
+//aur phle phase 1 hoti haai
+//NOTE:-> HUMESA PHLE PHASE 1 HI HOTI HAI PAR WO BY DEFAULT OFF REHTI HAI
+
 //note ---- click hum child pr karenge to chahe child pr listner ho ya na ho parent ka listner chalega hi chalega
+
+let inpu = document.querySelector("input");
+let count = document.querySelector("#count");
+
+
+inpu.addEventListener("input" , function(){
+    let left = 20 - inpu.value.length;
+    
+    if(left < 0){
+        count.textContent=left;
+        count.style.color ="red";
+    }else{
+        count.textContent=left;
+        count.style.color="black";
+    }
+})
