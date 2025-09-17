@@ -35,11 +35,7 @@ const users = [
         bio: "half introvert, half storyteller | entirely myself",
     }
     
-
 ]
-
-
-
 function showUsers(arr){
     arr.forEach(function(user){
         // Create main card div
@@ -81,9 +77,7 @@ function showUsers(arr){
         document.querySelector(".cards") .appendChild(card);
 
     })
-
 }
-
 showUsers(users);
 let a = document.querySelector(".cards");
 console.dir(a);
