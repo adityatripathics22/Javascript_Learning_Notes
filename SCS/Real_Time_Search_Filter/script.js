@@ -79,8 +79,8 @@ function showUsers(arr){
     })
 }
 showUsers(users);
-let a = document.querySelector(".cards");
-console.dir(a);
+// let a = document.querySelector(".cards");
+// console.dir(a);
 
 let inp = document.querySelector(".inp");
 inp.addEventListener("input" , function(){
@@ -88,7 +88,7 @@ inp.addEventListener("input" , function(){
         return users.name.startsWith(inp.value);
     })
     
-    const cards = document.querySelector(".cards");
+    // const cards = document.querySelector(".cards");
     // while (cards.firstChild) {
     //     cards.removeChild(cards.firstChild);
     // }
