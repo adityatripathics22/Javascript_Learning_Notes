@@ -4,6 +4,71 @@
 //global scope - poore code mei kahi bhi use ho sakti hai
 //block scope - {} curly braces mei hi use ho sakti hai
 
+/* =====================================================
+   TYPES OF SCOPING IN PROGRAMMING
+===================================================== */
+
+/* 1. What is Scoping?
+   - Scoping determines the region of a program where a variable is accessible.
+*/
+
+/* 2. Types of Scoping: */
+
+/* a) Lexical (Static) Scoping
+   - Scope is determined by position in the code.
+   - Inner functions can access variables of outer functions.
+   - Outer functions cannot access variables of inner functions.
+   - Used in: Python, Java, C, C++, JavaScript.
+   
+   Example:
+*/
+function outer() {
+  let x = 10;
+  function inner() {
+      console.log(x);  // inner can access x from outer
+  }
+  inner();
+}
+outer();  // Output: 10
+
+/* b) Dynamic Scoping
+ - Scope is determined by runtime call stack, not code position.
+ - Variables are resolved by searching the calling functions.
+ - Used in: Early Lisp, some shell scripts.
+ 
+ Conceptual Example:
+*/
+function outer() {
+  let x = 10;
+  inner();
+}
+
+function inner() {
+  console.log(x); // looks for x in the calling function
+}
+
+outer(); // Output: 10 (depends on call stack)
+
+/* 3. Other Scopes Based on Visibility:
+ - Global Scope: Accessible anywhere in the program.
+ - Local Scope: Accessible only inside a function/block.
+ - Nonlocal / Enclosing Scope: Accessible to nested functions but not global.
+ - Block Scope: Accessible inside a specific block ({ } in C++/JS, let/const in JS).
+*/
+
+/* 4. Comparison Table:
+
+ | Scope Type       | Determined By      | Accessible Where             | Example Language         |
+ |-----------------|-----------------|-----------------------------|------------------------|
+ | Lexical/Static  | Code position    | Inner functions see outer   | Python, JS, C          |
+ | Dynamic         | Runtime call     | Functions in call chain     | Early Lisp, Bash       |
+ | Global          | Anywhere         | Entire program              | C, Python, JS          |
+ | Local           | Function/block  | Inside function/block only  | C, Python, JS          |
+ | Nonlocal        | Enclosing func   | Nested functions            | Python (nonlocal)      |
+ | Block           | Within block     | Inside { } only             | C++, JS (let/const)    |
+*/
+
+
 
 //EXECUTION CONTEXT
 
