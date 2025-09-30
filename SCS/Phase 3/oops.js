@@ -1,3 +1,6 @@
+// humein seekhna hai factories banana , matlab ki aap eak baar blueprint bana do ki haar object kaise dikhega
+// and hum log naye objects with different  diffeerent values bana payenge , yahi uppar uppar se poora kama hai oops ka..
+
 function CreatePencil(name, price ,color ,company){
     this.name = name ;
     this.price = price ;
