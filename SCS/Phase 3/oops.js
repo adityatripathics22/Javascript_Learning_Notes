@@ -49,7 +49,7 @@
 // let p1 = new CreatePencil("natraj" , "natraj" , 10 , "black");
 // let p2 = new CreatePencil("apsara" , "apsara" , 10 , "red");
 
-
+/*
 class CreatePencil {
     constructor(name, company, price, color, length = 10) {
         this.name = name;
@@ -106,3 +106,60 @@ p1.use();  // Decreases pencil length
 
 p1.sharpen();  // Increases pencil length back
 p2.write("Hello from Apsara!"); // Writes in red
+
+
+*/
+
+class User {
+    constructor( name , address ,username , email){
+        this.name = name ;
+        this.address = address;
+        this.username = username ;
+        this.email = email;
+        this.role = "user";
+
+    }
+    checkRole(){
+        console.log(`you are a ${this.role}`);
+    }
+
+    write(text){
+        let h1 = document.createElement("h1");
+        h1.textContent = text;
+        document.body.appendChild(h1);
+
+    }
+}
+
+class Admin extends User {
+    constructor(name , address , username , email){
+        super(name , address , username , email);
+        this.role = "admin";
+    }
+    remove() {
+        document.querySelectorAll("h1").forEach(function (elem){
+            elem.remove();
+        });
+    }
+
+}
+
+let u1 = new User("aditya" , "mathura" , "adi.xp" , "adityatripathics22@gmail.com")
+let a1 = new Admin("saurabh" , "noida" , "sau.xp" , "cc@gmail.com");
+
+//classical inheritance - classes banana aur unhe extend kar dena 
+//prototypal inheritance - object object se inherit karta hai 
+
+let coffee = {
+    color : "dark",
+    drink : function() {
+        console.log("gut gut gut");
+    },
+};
+
+let arabiataCoffee = Object.create(coffee);
+arabiataCoffee.taste = "bitter";
+arabiataCoffee.drink(); 
+
+//sync - aesa code jo line by line chale 
+//async - aesa code jo jab chalne ke liye ready ho jaye tab chale
