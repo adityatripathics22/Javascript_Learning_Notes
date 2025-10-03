@@ -163,3 +163,21 @@ arabiataCoffee.drink();
 
 //sync - aesa code jo line by line chale 
 //async - aesa code jo jab chalne ke liye ready ho jaye tab chale
+/*
+
+🔹 1. Synchronous (Sync) JavaScript
+
+Code runs line by line (blocking).
+
+Each statement must finish before the next one starts.
+
+If a line takes a long time (e.g., a heavy loop or file read), it blocks the entire program.
+
+🔹 2. Asynchronous (Async) JavaScript
+
+Code does not block execution.
+
+Long tasks (like fetching data from an API, timers, reading files) can run in the background.
+
+JS uses the event loop + callback queue to handle async tasks.
+*/
