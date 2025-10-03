@@ -1,6 +1,8 @@
 // humein seekhna hai factories banana , matlab ki aap eak baar blueprint bana do ki haar object kaise dikhega
 // and hum log naye objects with different  diffeerent values bana payenge , yahi uppar uppar se poora kama hai oops ka..
 
+const { setDriver } = require("mongoose");
+
 // function CreatePencil(name, price ,color ,company){
 //     this.name = name ;
 //     this.price = price ;
@@ -167,17 +169,89 @@ arabiataCoffee.drink();
 
 🔹 1. Synchronous (Sync) JavaScript
 
-Code runs line by line (blocking).
+    Code runs line by line (blocking).
 
-Each statement must finish before the next one starts.
+    Each statement must finish before the next one starts.
 
-If a line takes a long time (e.g., a heavy loop or file read), it blocks the entire program.
+    If a line takes a long time (e.g., a heavy loop or file read), it blocks the entire program.
 
 🔹 2. Asynchronous (Async) JavaScript
 
-Code does not block execution.
+    Code does not block execution.
 
-Long tasks (like fetching data from an API, timers, reading files) can run in the background.
+    Long tasks (like fetching data from an API, timers, reading files) can run in the background.
 
-JS uses the event loop + callback queue to handle async tasks.
+    JS uses the event loop + callback queue to handle async tasks.
 */
+
+
+// callback - A callback is simply a function passed as an argument to another function, so that it can be executed later.
+
+    function greet(name, callback) {
+        console.log("Hello " + name);
+        callback(); // call the function passed in
+    }
+    
+    function sayBye() {
+        console.log("Goodbye!");
+    }
+    
+    greet("Aditya", sayBye);
+
+/* 
+🔹 Callbacks with Asynchronous Code
+
+    Callbacks are very common in async operations like timers, file reads, or API requests.
+    */
+    console.log("Start");
+
+    setTimeout(() => {
+        console.log("This runs after 2 seconds");
+    }, 2000);
+
+    console.log("End");
+
+/*
+Callback = a function you pass to another function, to be executed later.
+
+Used in sync and async code.
+
+Too many callbacks → “callback hell” → use Promises / async-await instead. 
+*/
+
+//ye part of code kahi likha hai duniya mei
+function profileLekarAao( username , callback){
+    console.log("fetching profile data...");
+    setTimeout(() => {
+        callback({username , age : 22 , email : "aditya@gmail.com"});
+    }, 2000);
+}
+
+function saarePostLekarAao(id , callback){
+    console.log("fetching post data...")
+    setTimeout(() => {
+        callback({id : "adityaaa.xd", post : "post1" , post2 : "post2"});
+    }, 2000);
+}
+
+function savedPostsLekarAao( id , callback){
+    console.log("fetching saved posts data...");
+    setTimeout(() => {
+        callback({id : "adityaaa.xd", savedPosts : [1,2,3,4,5,6,7,8,9] });
+    })
+}
+//hum bss ye line of ocde hi likhte hai , and ye callback function ko call karta hai
+profileLekarAao("aditya" , function(data){
+    console.log(data);
+    saarePostLekarAao(data.id , function(posts){
+        console.log(posts);
+        savedPostsLekarAao(data.id , function(savedPosts){
+            console.log(savedPosts);
+        });
+    });
+});
+
+// this is called callback hell
+
+//PROMISES------------------------------------------------
+ 
