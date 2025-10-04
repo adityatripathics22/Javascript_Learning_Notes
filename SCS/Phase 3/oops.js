@@ -228,7 +228,7 @@ function profileLekarAao( username , callback){
 }
 
 function saarePostLekarAao(id , callback){
-    console.log("fetching post data...")
+    console.log("fetching post data...") 
     setTimeout(() => {
         callback({id : "adityaaa.xd", post : "post1" , post2 : "post2"});
     }, 2000);
@@ -254,4 +254,61 @@ profileLekarAao("aditya" , function(data){
 // this is called callback hell
 
 //PROMISES------------------------------------------------
+   //aap kisi bhi task ko complete krne ke liye promise bana skte ho
+   //jo  ki do states mei se ek mei jaa skta hai and wo yaa to resolve hoga ya phir reject hoga 
+   //hume dono ke liye code likhna padta hai
+   //resolve - task complete hui
+   //reject - task not complete hui
+   //pending - task still pending
+   //fulfilled - task complete hui
+   //rejected - task not complete hui
+   //settled - task either complete hui ya not complete hui
+   //unsettled - task still pending
+   //resolved - task either complete hui ya not complete hui
+
+let promise = new Promise((resolve , reject)=>{
+    setTimeout(()=>{
+        resolve("task complete");
+    }, 2000);
+});
+
+promise.then((data)=>{
+    console.log(data);
+}).catch((err)=>{
+    console.log(err);
+});
+
+//resolve hua toh then chalega aur reject hua toh catch chalega
+
+
+let pr = new Promise((resolve , reject) => {
+    setTimeout(()=>{
+        let rn = Math.floor(Math.random() * 10);
+        if(rn % 2 === 0){
+            resolve("task complete");
+        }else{
+            reject("task not complete");
+        }
+    }, 2000);
+
+})
+
+pr.then(function(data){
+    console.log(data);
+}).catch(function(data){
+    console.log(data);
+})
+
+
+  
+   
+  
+
  
+
+
+
+
+
+
+
