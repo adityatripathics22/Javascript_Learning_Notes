@@ -33,3 +33,11 @@ fetch("https://randomuser.me/api/?results=3")
 
     })
 })
+/*
+Category	Range	Meaning
+1xx	100–199	Informational
+2xx	200–299	Success
+3xx	300–399	Redirection
+4xx	400–499	Client error
+5xx	500–599	Server error
+*/
