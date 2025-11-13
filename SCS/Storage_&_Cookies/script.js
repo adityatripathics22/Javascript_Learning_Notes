@@ -9,7 +9,6 @@
 
 //sessionstorage -> ye aapka data temporarily store karta hai matlab ki tab band hua aur data gyab
 
-
 //cookies -> ye bhi data store karta hai aur aapka data browser ke 
 // cookies naam ki property mei save hota hai and ye cookie concept kam data ya light data ke liye hota hai
 
