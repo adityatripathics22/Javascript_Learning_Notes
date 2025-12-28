@@ -1,0 +1,253 @@
+========================
+REACT COMPLETE ROADMAP
+========================
+
+1. WHAT IS REACT & WHY REACT
+---------------------------
+- React is a JavaScript library for building user interfaces.
+- Developed by Facebook.
+- Used for Single Page Applications (SPA).
+
+Why React:
+- Component-based architecture
+- Reusable code
+- Fast rendering using Virtual DOM
+- Large community and ecosystem
+
+
+2. INSTALL REACT (VITE)
+----------------------
+# Create React app using Vite
+npm create vite@latest react-app
+cd react-app
+npm install
+npm run dev
+
+- Vite is fast and lightweight
+- Better performance than CRA
+
+
+3. IMPORT & EXPORT
+-----------------
+# Export
+export default App;
+export const title = "React";
+
+# Import
+import App from './App';
+import { title } from './file';
+
+
+4. REACT FOLDER STRUCTURE
+------------------------
+src/
+ ├── components/
+ ├── pages/
+ ├── hooks/
+ ├── services/
+ ├── App.jsx
+ ├── main.jsx
+
+- Keeps project organized and scalable
+
+
+5. REAL DOM VS VIRTUAL DOM
+-------------------------
+- Real DOM updates entire page (slow)
+- Virtual DOM updates only changed elements
+- React uses Virtual DOM for performance
+
+
+6. JSX
+------
+- JSX = JavaScript + HTML
+Example:
+const element = <h1>Hello React</h1>;
+
+- Makes UI code readable
+- Converted to JS by Babel
+
+
+7. useState HOOK
+----------------
+- Used to manage state in React
+
+Example:
+const [count, setCount] = useState(0);
+
+- Updating state re-renders UI
+
+
+8. ADDING CSS
+-------------
+Normal CSS:
+import './App.css';
+
+Tailwind CSS:
+<button className="bg-blue-500 text-white px-4 py-2">
+- Utility-first CSS framework
+- Faster UI development
+
+
+9. CALLING FUNCTIONS IN REACT
+-----------------------------
+Example:
+<button onClick={handleClick}>Click</button>
+
+- Used for events like click, submit, hover
+
+
+10. FORM HANDLING
+-----------------
+Example:
+<input
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+/>
+
+- Controlled components
+- Used in login, signup forms
+
+
+11. TWO WAY BINDING
+------------------
+- State updates UI
+- UI updates state
+- Achieved using useState + onChange
+
+
+12. COMPONENTS
+--------------
+- Reusable UI blocks
+
+Example:
+function Header() {
+  return <h1>Header</h1>;
+}
+
+- Improves maintainability
+
+
+13. PROPS DRILLING
+------------------
+- Passing data parent → child → grandchild
+
+Example:
+<Component data={value} />
+
+Problem:
+- Too many props
+
+Solution:
+- Context API
+- Redux
+
+
+14. RENDERING JSON DATA
+----------------------
+Example:
+data.map(item => (
+  <p key={item.id}>{item.name}</p>
+))
+
+- Used to display lists, tables, cards
+
+
+15. API INTEGRATION (AXIOS)
+--------------------------
+npm install axios
+
+Example:
+axios.get(url)
+  .then(res => setData(res.data))
+
+- Used to connect frontend with backend
+
+
+16. REACT ROUTER DOM
+-------------------
+npm install react-router-dom
+
+- Used for routing without page reload
+- Example routes:
+  /login
+  /dashboard
+  /profile
+
+
+17. REACT TOASTIFY
+-----------------
+- Used for flash messages
+
+Example:
+toast.success("Success!");
+toast.error("Error!");
+
+- Notifications and alerts
+
+
+18. useEffect HOOK
+------------------
+- Handles side effects
+
+Example:
+useEffect(() => {
+  fetchData();
+}, []);
+
+Used for:
+- API calls
+- Lifecycle events
+- Subscriptions
+
+
+19. useRef HOOK
+---------------
+- Direct DOM access
+- Does not cause re-render
+
+Example:
+const inputRef = useRef();
+inputRef.current.focus();
+
+
+20. CONTEXT API
+---------------
+- Global state management
+- Avoids props drilling
+
+Used for:
+- Authentication
+- Theme
+- User data
+
+
+21. REDUX TOOLKIT
+----------------
+- Advanced global state management
+- Centralized store
+- Best for large applications
+
+
+22. FRAMER MOTION
+----------------
+- Animation library for React
+
+Example:
+<motion.div animate={{ opacity: 1 }} />
+
+- Smooth animations and transitions
+
+
+23. DEPLOYMENT
+--------------
+npm run build
+
+Platforms:
+- Vercel
+- Netlify
+- GitHub Pages
+
+========================
+END OF REACT ROADMAP
+========================
